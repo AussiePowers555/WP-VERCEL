@@ -1,0 +1,41 @@
+{
+  "name": "whitepointer-fullstack",
+  "version": "1.0.0",
+  "description": "WhitePointer Motorcycle Rental Management - Full Stack Application",
+  "main": "server.js",
+  "scripts": {
+    "install-all": "cd backend && npm install && cd ../frontend && npm install",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "start:backend": "cd backend && npm start",
+    "start:frontend": "cd frontend && npm start",
+    "setup": "npm run install-all && cp backend/.env.example backend/.env && cp frontend/.env.example frontend/.env",
+    "vercel-build": "cd frontend && npm install && npm run build"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/whitepointer/motorcycle-rental-management"
+  },
+  "keywords": [
+    "motorcycle",
+    "rental",
+    "management",
+    "react",
+    "express",
+    "postgresql"
+  ],
+  "author": "WhitePointer Team",
+  "license": "ISC"
+}
